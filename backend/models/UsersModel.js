@@ -13,7 +13,11 @@ const UserSchema = new Schema({
         type: String,
         required: true
     },
-    lastUser: {
+    rol: {
+        type: String,
+        default: "client"
+    }
+    /*lastUser: {
         name: {
             type: String,
         },
@@ -23,6 +27,6 @@ const UserSchema = new Schema({
         email: {
             type: String,
         }
-    }
+    }*/
 });
 export const UserModel = model("users", UserSchema);
